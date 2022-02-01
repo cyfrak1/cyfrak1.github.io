@@ -33,7 +33,7 @@ export class SkillsComponent implements OnInit {
   sliderContentArray : string[] = [
     'I have mastered it perfectly',
     'I have mastered it perfectly',
-    'I am using es6 syntags',
+    'I am using es6',
     'I know basic stuff about it',
     'I know basic stuff about it',
   ];
