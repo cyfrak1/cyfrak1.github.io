@@ -1,0 +1,16 @@
+<div (mousemove)="onMouseDown($event)" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)" class="container">
+  <div *ngIf="showCursor" [ngClass]="activeAlert ? 'app-alert' : 'app-alert-close-now' ">
+    <div class="app-alert-close" (click)="closeAlert()"></div>
+    <article class="app-alert-text">
+      <p>Hello there, this page have a special feature that can be used. If you moved the cursor down, subpage would change!</p>
+    </article>
+    <img class="app-alert-img" alt="bulb"/>
+  </div>
+  <div *ngIf="showCursor" [ngClass]="customCursor == true ? 'customCursor-active' : 'customCursor-deactivate' " [style.transform]="'translate3d(' + cursorPosition[0] + 'px,' + cursorPosition[1] + 'px, 1px)'"></div>
+  <app-page-loader (activeHomeAnimation)="activeHomeAnimation($event)"></app-page-loader>
+  <app-menu (changeView)="changeAplicationView($event)" [activeAnimationMenu]="activeMenu" ></app-menu>
+  <app-home [activeAnimationHome]="activeHome" (activeMenuAnimation)="activeMenuAnimation($event)"></app-home>
+  <app-about [activeAnimationAbout]="activeAbout" (activeMenuAnimation)="activeMenuAnimation($event)"></app-about>
+  <app-skills [activeAnimationSkills]="activeSkills" (activeMenuAnimation)="activeMenuAnimation($event)"></app-skills>
+  <app-contact [activeAnimationContact]="activeContact" (activeMenuAnimation)="activeMenuAnimation($event)"></app-contact>
+</div>

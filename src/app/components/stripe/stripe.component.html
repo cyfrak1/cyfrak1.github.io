@@ -1,0 +1,8 @@
+<div 
+    [ngStyle]="{'background':background,'transform':transformValue,'left':leftValue}" 
+    [@entryOfStripe]="activeStripeAnimation ? nameAnimation == 'entryOfStripe' && 'show' : nameAnimation == 'entryOfStripe' &&  'hide'"
+    [@entryOfStripeReverse]="activeStripeAnimation ? nameAnimation == 'entryOfStripeReverse' && 'show' : nameAnimation == 'entryOfStripeReverse' &&  'hide'"
+    class="wrapper-stripe"
+    >
+    <p [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'">{{title}}</p>
+</div>

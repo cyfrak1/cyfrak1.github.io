@@ -1,0 +1,17 @@
+<div [ngStyle]="{'z-index': zindex}" class="wrapper-contact">
+    <app-stripe title="04/04" nameAnimation = "entryOfStripe" [activeStripeAnimation]="activeAnimationContact" background="#7A0BC0" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <app-stripe title="Contact" nameAnimation = "entryOfStripeReverse" [activeStripeAnimation]="activeAnimationContact" background="#fff" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <article [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" class="wrapper-contact-content">
+        <h2 class="wrapper-contact-content-title">Get in touch with me</h2>
+        <div class="container-contact">
+            <img src="../../../../assets/email.png" class="container-contact-icon">
+            <p>+48 733 440 117</p>
+        </div>
+        <div class="container-contact">
+            <img src="../../../../assets/email.png" class="container-contact-icon">
+            <p>oliwierbielas.praca@gmail.com</p>
+        </div>
+    </article>
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-top" alt="dots which are in square shape">
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-bottom" alt="dots which are in square shape">
+</div>

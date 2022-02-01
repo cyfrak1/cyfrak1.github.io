@@ -1,0 +1,11 @@
+<div class="wrapper-home">
+    <app-stripe title="01/04" nameAnimation = "entryOfStripe" [activeStripeAnimation]="activeAnimationHome" background="#fff" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <app-stripe title="Home" nameAnimation = "entryOfStripeReverse" [activeStripeAnimation]="activeAnimationHome" background="#F73859" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <header [@fadeInOrOutSquare]="activeSquareAnimation ? 'show' : 'hide'" class="wrapper-home-square">
+        <h2 class="wrapper-home-square-text"><span class="text-black">I&nbsp;</span><span class="text-red">want to</span></h2>
+        <h2 class="wrapper-home-square-text"><span class="text-red">be you</span><span class="text-white">r</span></h2>
+        <h2 class="wrapper-home-square-text"><span class="text-black">a</span><span class="text-red">pprentic</span><span class="text-white">e</span></h2>
+    </header>
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-top" alt="dots which are in square shape">
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-bottom" alt="dots which are in square shape">
+</div>

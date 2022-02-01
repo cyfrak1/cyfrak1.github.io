@@ -1,0 +1,12 @@
+<nav class="nav-wrapper">
+    <ul class="nav-list">
+        <li [@fadeInOut]="activeAnimationMenu ? 'show' : 'hide'" 
+        *ngFor="let nameOfItem of nameOfItems; let index = index"   
+        (mouseenter)="showThumbnailAfterMouseEnterItem(index)"
+        (mouseleave)="hideThumbnailAfterMouseEnterItem(index)"
+        (click)="navigateToView(nameOfItem)"
+        [ngClass]="showThumbnail[index] == true ? ' nav-list-item nav-list-item-active':'nav-list-item'">
+            {{nameOfItem}}
+        </li>
+    </ul>
+</nav>

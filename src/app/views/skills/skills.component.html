@@ -1,0 +1,14 @@
+<div [ngStyle]="{'z-index': zindex}" class="wrapper-skills">
+    <app-stripe title="03/04" nameAnimation = "entryOfStripe" [activeStripeAnimation]="activeAnimationSkills" background="#fff" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <app-stripe title="Skills" nameAnimation = "entryOfStripeReverse" [activeStripeAnimation]="activeAnimationSkills" background="#6B7AA1" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <swiper  [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" [ngStyle]="{'z-index': zindex}" [navigation]="true">
+        <ng-template style="overflow: visible;" *ngFor="let icon of icons; index as i"  swiperSlide>
+            <img src={{icon}} alt="icon" />
+            <article [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" [ngStyle]="{'z-index': zindex}" class="wrapper-skills-content">
+                <p>{{sliderContentArray[i]}}</p>
+            </article>
+        </ng-template>
+    </swiper>
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-top" alt="dots which are in square shape">
+    <img [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" src="../../../assets/dotsSquare1.png" class="wrapper-img-bottom" alt="dots which are in square shape">
+</div>

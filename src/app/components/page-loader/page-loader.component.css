@@ -1,0 +1,26 @@
+.loader-wrapper{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.loader-wrapper-text{
+    display: flex;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+}
+.loader-wrapper-text::after{
+    content: '';
+    display: block;
+    height: 1.1em;
+    border-right: 0.5vh solid;
+    animation: 1s ease-in-out blink-caret infinite;
+}
+@keyframes blink-caret {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}

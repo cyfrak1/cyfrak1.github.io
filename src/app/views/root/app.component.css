@@ -1,0 +1,132 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.customCursor-active{
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    top: -5vh;
+    left: -5vh;
+    background: #000;
+    border-radius: 100%;
+    z-index: 100;
+    cursor: none;
+}
+.customCursor-active:before{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    background: #fff;
+    animation: 1.5s loadingCursor ease-in-out forwards;
+}
+.customCursor-active:after{
+    content: 'Loading';
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    background: transparent;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    z-index: 101;
+}
+.customCursor-deactivate{
+    display: none;
+    opacity: 0;
+}
+
+@keyframes loadingCursor{
+    from{
+        height: 0;
+        width: 0;
+    }
+    to{
+        height: 10vh;
+        width: 10vh;
+    }
+}
+.app-alert{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: .5s appearAlert ease-in-out;
+}
+@keyframes appearAlert {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.app-alert-text{
+    height: 200px;
+    width: 400px;
+    background: #fff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    border-radius:10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    z-index: 205;
+}
+.app-alert-img{
+    content: url('../../../assets/bulb.png');
+    position: absolute;
+    top: calc(50% - 250px);
+    right: calc(50% - 400px);
+    height: 400px;
+    width: 400px;
+    transform: rotate(30deg);
+    z-index: 204;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.app-alert-img:hover{
+    content: url('../../../assets/bulb2.png');
+    top: calc(50% - 250px);
+    right: calc(50% - 450px);
+    transition: .5s ease-in-out;
+}
+.app-alert-close{
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    background: transparent;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 206;
+}
+.app-alert-close-now{
+    display: none;
+}
+.app-alert-close::after,
+.app-alert-close::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    background: #fff;
+}
+.app-alert-close::after{
+    transform: rotate(45deg);
+}
+.app-alert-close::before{
+    transform: rotate(-45deg);
+}

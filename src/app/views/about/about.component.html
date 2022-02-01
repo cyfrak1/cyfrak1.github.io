@@ -1,0 +1,13 @@
+<div [ngStyle]="{'z-index': zindex}" class="wrapper-about">
+    <app-stripe title="02/04" nameAnimation = "entryOfStripe" [activeStripeAnimation]="activeAnimationAbout" background="#34BE82" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <app-stripe title="About" nameAnimation = "entryOfStripeReverse" [activeStripeAnimation]="activeAnimationAbout" background="#fff" [fadeInAnimation]="fadeInAnimation"></app-stripe>
+    <article [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" class="about-container">
+        <h2 class="about-title">Hello, my name is</h2>
+        <h1 class="about-title">Oliwier Bielas</h1>
+        <p class="about-text">Hello, my name is Oliwier Bielas. I am keen on watching football and anime. I also enjoy sailing a motorboat and programming. I am a talkative and humoristic person. I love meeting new people and cooperating with them. I have been coding since 2019, when I built my first website. </p>
+        <p *ngIf="screenWidth >= 1024" class="about-text">Nowadays I am mostly interested in Angular. I have started learning this technology at the end of 2021 and it feels good to me. In the future I'd like to become a regular frontend developer, because I love doing it. Futhermore I want to expand my knowledge about designing websites, backend technologies and obviously frontend technologies.</p>
+    </article>
+    <div [@fadeInOut]="fadeInAnimation ? 'show' : 'hide'" class="about-container">
+        <img class="about-image" src="../../../assets/myPhoto.png" />
+    </div>
+</div>
