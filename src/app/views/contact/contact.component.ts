@@ -24,8 +24,11 @@ export class ContactComponent implements OnInit {
       this.activeMenuAnimation.emit(this.activeAnimationContact);
       this.fadeInAnimation = this.activeAnimationContact;
     },this.activeAnimationContact ? 1000 : 0);
-    if(this.activeAnimationContact == true){
+    if(this.activeAnimationContact == false){
       this.zindex = 3;
+    }
+    else{
+      this.zindex = 5;
     }
   }
 
